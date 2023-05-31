@@ -2,8 +2,8 @@ import { Grid, GridItem, Box } from "@chakra-ui/react";
 import NavBar from "./components/NavBar";
 //local
 import bg from "./assets/icons/bakeryBg.svg";
-import Hero from "./components/Hero";
-import About from "./components/About";
+import Home from "./Pages/Home";
+import About from "./Pages/About";
 
 function App() {
   return (
@@ -18,7 +18,7 @@ function App() {
           <NavBar />
         </GridItem>
         <GridItem>
-          <Hero />
+          <Home />
           {/* <About /> */}
         </GridItem>
       </Grid>

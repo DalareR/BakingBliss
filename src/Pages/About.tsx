@@ -1,10 +1,15 @@
 import { Grid, GridItem, Heading, Image, Text, VStack } from "@chakra-ui/react";
 // local
 import aboutImg from "../assets/images/aboutImg.jpg";
+import { motion } from "framer-motion";
 
 export default function About() {
   return (
     <Grid
+      as={motion.div}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1, transition: { delay: 0.5 } }}
+      exit={{ opacity: 0 }}
       w="100%"
       mt="5"
       gap="5"

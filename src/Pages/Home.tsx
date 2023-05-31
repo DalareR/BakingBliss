@@ -16,7 +16,7 @@ import poundCake from "../assets/images/poundCake.jpg";
 import lemonPie from "../assets/images/lemonPie.jpg";
 import { AnimatePresence, motion } from "framer-motion";
 
-export default function Hero() {
+export default function Home() {
   const imgCarousel = [fruittart, gingerbread, poundCake, lemonPie];
   const [winH, setWinH] = useState(0);
   const [index, setIndex] = useState(0);
