@@ -59,7 +59,9 @@ export default function NavBar() {
   return (
     <>
       <HStack justifyContent="space-between" p="0 1%" h="50px">
-        <Heading>Bakery</Heading>
+        <Heading size="lg" fontWeight="600">
+          Baking Bliss
+        </Heading>
         <HStack display={{ base: "none", md: "flex" }}>
           {navItems.map((item, index) => (
             <Link key={index} to={item.link}>

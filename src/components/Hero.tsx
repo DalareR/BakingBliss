@@ -18,23 +18,34 @@ import { AnimatePresence, motion } from "framer-motion";
 
 export default function Hero() {
   const imgCarousel = [fruittart, gingerbread, poundCake, lemonPie];
+  const [winH, setWinH] = useState(0);
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
+    setWinH(window.innerHeight);
     const interval = setInterval(() => {
       setIndex((prev) => (prev === imgCarousel.length - 1 ? 0 : prev + 1));
     }, 10000);
     return () => clearInterval(interval);
   }, []);
 
+  window.addEventListener("resize", () => {
+    setWinH(window.innerHeight);
+  });
+
   return (
     <AnimatePresence>
       <Grid
-        h="90%"
+        as={motion.div}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1, transition: { delay: 0.5 } }}
+        exit={{ opacity: 0 }}
         w="100%"
+        h={`${winH - 50}px`}
         gridTemplateColumns={{ md: "1fr 1fr" }}
         gridTemplateRows={{ base: "2fr 1fr", md: "auto" }}
         gap="5"
+        p="0 2%"
         alignItems="center"
         overflow="hidden"
       >
@@ -72,6 +83,9 @@ export default function Hero() {
                 height="25px"
                 p="2"
                 borderRadius="3px"
+                _hover={{
+                  bg: "brand.100",
+                }}
               >
                 View Menu
               </Button>
