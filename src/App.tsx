@@ -5,7 +5,7 @@ import Hero from "./components/Hero";
 function App() {
   return (
     <>
-      <Box m="auto" maxW={{ base: "100vw", md: "120ch" }}>
+      <Box h="100vh" w="100vw" m="auto" maxW={{ base: "100vw", md: "120ch" }}>
         <NavBar />
         <Hero />
       </Box>

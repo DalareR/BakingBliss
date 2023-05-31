@@ -114,6 +114,7 @@ export default function NavBar() {
             h="100%"
             bg="brand.50"
             display={{ base: "flex", md: "none" }}
+            zIndex="1"
           >
             {navItems.map((item, index) => (
               <Box key={index} as={motion.div} variants={menuItems}>

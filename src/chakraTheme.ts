@@ -20,4 +20,12 @@ const config: ThemeConfig = {
     useSystemColorMode: false
 }
 
-export const chakraTheme = extendTheme({colors, config})
+const styles = {
+    global : {
+        body: {
+            fontFamily: `Nanum Gothic, sans-serif`
+        }
+    }
+}
+
+export const chakraTheme = extendTheme({colors, config, styles})
