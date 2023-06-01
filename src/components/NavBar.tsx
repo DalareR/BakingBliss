@@ -76,7 +76,7 @@ export default function NavBar() {
                     hoveredItem === item.name || selectedItem === item.name
                       ? "100%"
                       : 0,
-                  height: "3px",
+                  height: "2px",
                   bg: "black",
                   transition: "all .3s ease",
                 }}

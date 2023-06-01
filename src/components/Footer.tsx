@@ -1,13 +1,23 @@
-import { Flex, HStack, Icon, Text } from "@chakra-ui/react";
+import {
+  Divider,
+  Flex,
+  HStack,
+  Heading,
+  Icon,
+  Stack,
+  Text,
+  VStack,
+} from "@chakra-ui/react";
 import { AiOutlineFacebook } from "react-icons/ai";
-import { BsInstagram } from "react-icons/bs";
+import { BsInstagram, BsTelephoneFill } from "react-icons/bs";
+import { MdEmail } from "react-icons/md";
 import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
     <Flex direction="column" gap="5" align="center" p="5% 0" bg="brand.50">
       <HStack justify="space-around" p="5" w="100%">
-        <Flex direction={{ base: "column", md: "row" }} gap="3">
+        <Flex display={{ base: "none", md: "flex" }} gap="3">
           <Link to="/">
             <Text fontWeight="bold">Home</Text>
           </Link>
@@ -21,23 +31,36 @@ export default function Footer() {
             <Text fontWeight="bold">Contact</Text>
           </Link>
         </Flex>
-        <HStack>
-          <Link to="/">
-            <Icon
-              as={BsInstagram}
-              boxSize={5}
-              _hover={{ transform: `scale(1.1)` }}
-            />
-          </Link>
-          <Link to="/">
-            <Icon
-              as={AiOutlineFacebook}
-              boxSize={6}
-              fontWeight={"bold"}
-              _hover={{ transform: `scale(1.1)` }}
-            />
-          </Link>
-        </HStack>
+        <VStack>
+          <VStack>
+            <HStack>
+              <Icon as={BsTelephoneFill} boxSize="5" />
+              <Heading size="sm">717-123-456</Heading>
+            </HStack>
+            <HStack>
+              <Icon as={MdEmail} boxSize="5" />
+              <Heading size="sm">dalarerana@gmail.com</Heading>
+            </HStack>
+          </VStack>
+          <Divider borderColor="black" />
+          <HStack>
+            <Link to="/">
+              <Icon
+                as={BsInstagram}
+                boxSize={5}
+                _hover={{ transform: `scale(1.1)` }}
+              />
+            </Link>
+            <Link to="/">
+              <Icon
+                as={AiOutlineFacebook}
+                boxSize={6}
+                fontWeight={"bold"}
+                _hover={{ transform: `scale(1.1)` }}
+              />
+            </Link>
+          </HStack>
+        </VStack>
       </HStack>
       <Text>
         Website created by{" "}
