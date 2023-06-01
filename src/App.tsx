@@ -1,4 +1,4 @@
-import { Box } from "@chakra-ui/react";
+import { Box, VStack } from "@chakra-ui/react";
 import NavBar from "./components/NavBar";
 //local
 import bg from "./assets/icons/bakeryBg.svg";
@@ -10,8 +10,13 @@ import { Route, Routes } from "react-router-dom";
 
 function App() {
   return (
-    <Box minH="100vh" bg={`url(${bg})`} bgColor="brand.50">
-      <Box m="auto" maxW={{ base: "100svw", md: "120ch" }}>
+    <VStack
+      justify="space-between"
+      minH="100vh"
+      bg={`url(${bg})`}
+      bgColor="brand.50"
+    >
+      <Box maxW={{ base: "100svw", md: "120ch" }}>
         <NavBar />
         <Routes>
           <Route path="/">
@@ -23,9 +28,9 @@ function App() {
           </Route>
           <Route path="/about" element={<About />} />
         </Routes>
-        <Footer />
       </Box>
-    </Box>
+      <Footer />
+    </VStack>
   );
 }
 

@@ -36,6 +36,8 @@ export default function ProductDesc({ product }: Props) {
     <AnimatePresence>
       <Box
         as={motion.div}
+        w="100svw"
+        h="100svh"
         variants={variant}
         initial="initial"
         animate="animate"
@@ -43,11 +45,14 @@ export default function ProductDesc({ product }: Props) {
         pos="fixed"
         top="0"
         left="0"
-        w="100svw"
-        h="100svh"
-        bg="rgba(0,0,0,.1)"
         zIndex={1}
       >
+        <Box
+          w="100%"
+          h="100%"
+          bgColor="rgba(0,0,0,.1)"
+          onClick={() => navigate("/menu")}
+        />
         <Card
           pos="absolute"
           top="50%"
@@ -60,6 +65,7 @@ export default function ProductDesc({ product }: Props) {
           variant="outline"
           bg="brand.50"
           borderRadius="none"
+          zIndex={2}
         >
           <Image
             objectFit="cover"
@@ -75,7 +81,10 @@ export default function ProductDesc({ product }: Props) {
             pos="absolute"
             top="10px"
             right="10px"
+            bgColor={{ base: "rgba(0,0,0,.7)", md: "transparent" }}
             color={{ base: "white", md: "black" }}
+            p={{ base: 1, md: 0 }}
+            borderRadius={{ base: "50%", md: "none" }}
             cursor="pointer"
             onClick={() => navigate("/menu")}
           />

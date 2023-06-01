@@ -17,11 +17,11 @@ export default function Footer() {
     <Flex
       // pos="absolute"
       // bottom="0"
-      // w="100%"
+      w="100%"
       direction="column"
       gap="5"
       align="center"
-      p="5% 0"
+      p="2% 0"
       bg="brand.50"
       mt="5"
       boxShadow="-3px -3px 10px rgba(0,0,0,.05)"
@@ -41,15 +41,19 @@ export default function Footer() {
             <Text fontWeight="bold">Contact</Text>
           </Link>
         </Flex>
-        <VStack>
-          <VStack>
+        <VStack align={{ base: "center", md: "start" }}>
+          <VStack align="start">
             <HStack>
-              <Icon as={BsTelephoneFill} boxSize="5" />
-              <Heading size="sm">717-123-456</Heading>
+              <Icon as={BsTelephoneFill} />
+              <Heading size="xsm" fontWeight="500">
+                717-123-456
+              </Heading>
             </HStack>
             <HStack>
-              <Icon as={MdEmail} boxSize="5" />
-              <Heading size="sm">dalarerana@gmail.com</Heading>
+              <Icon as={MdEmail} />
+              <Heading size="xsm" fontWeight="500">
+                dalarerana@gmail.com
+              </Heading>
             </HStack>
           </VStack>
           <Divider borderColor="black" />
