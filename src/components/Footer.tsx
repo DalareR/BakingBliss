@@ -4,7 +4,6 @@ import {
   HStack,
   Heading,
   Icon,
-  Stack,
   Text,
   VStack,
 } from "@chakra-ui/react";
@@ -15,7 +14,16 @@ import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
-    <Flex direction="column" gap="5" align="center" p="5% 0" bg="brand.50">
+    <Flex
+      // pos="absolute"
+      // bottom="0"
+      // w="100%"
+      direction="column"
+      gap="5"
+      align="center"
+      p="5% 0"
+      bg="brand.50"
+    >
       <HStack justify="space-around" p="5" w="100%">
         <Flex display={{ base: "none", md: "flex" }} gap="3">
           <Link to="/">
