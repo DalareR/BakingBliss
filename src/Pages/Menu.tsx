@@ -11,6 +11,7 @@ const variantParent = {
   animate: {
     opacity: 1,
     transition: {
+      delay: 0.2,
       when: "beforeChildren",
       staggerChildren: 0.08,
     },

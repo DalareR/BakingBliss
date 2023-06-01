@@ -56,6 +56,8 @@ export default function NavBar() {
     { name: "Contact", link: "/contact" },
   ];
 
+  console.log(selectedItem);
+
   return (
     <>
       <HStack justifyContent="space-between" p="0 1%" h="50px" bg="brand.50">
@@ -122,7 +124,7 @@ export default function NavBar() {
           >
             {navItems.map((item, index) => (
               <Box key={index} as={motion.div} variants={menuItems}>
-                <Link to={item.link}>
+                <Link to={item.link} onClick={() => setMenuCollapsed(true)}>
                   <Text
                     fontSize="2rem"
                     _before={{
