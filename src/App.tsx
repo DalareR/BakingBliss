@@ -18,8 +18,8 @@ function App() {
           <NavBar />
         </GridItem>
         <GridItem>
-          <Home />
           {/* <About /> */}
+          <Home />
         </GridItem>
       </Grid>
     </Box>

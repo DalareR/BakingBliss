@@ -1,3 +1,9 @@
 * {
   box-sizing: border-box;
 }
+
+@media screen and (min-width: 768px) {
+  .service:nth-child(even) .serviceImg {
+    order: 2;
+  }
+}

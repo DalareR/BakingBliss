@@ -58,7 +58,7 @@ export default function NavBar() {
 
   return (
     <>
-      <HStack justifyContent="space-between" p="0 1%" h="50px">
+      <HStack justifyContent="space-between" p="0 1%" h="50px" bg="brand.50">
         <Heading size="lg" fontWeight="600">
           Baking Bliss
         </Heading>
