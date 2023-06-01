@@ -1,5 +1,4 @@
 import {
-  HStack,
   Heading,
   Image,
   VStack,
@@ -8,9 +7,36 @@ import {
   Stack,
   Flex,
 } from "@chakra-ui/react";
+import { motion } from "framer-motion";
 //local
-import aboutImg from "../assets/images/aboutImg.jpg";
 import { Link } from "react-router-dom";
+
+// const variant = {
+//   initial: {
+//     opacity: 0,
+//     y: "-100%",
+//   },
+//   animate: {
+//     opacity: 1,
+//     y: 0,
+//     transition: {
+//       delay: 0.5,
+//     },
+//   },
+//   exit: {
+//     opacity: 0,
+//     y: "-100%",
+//   },
+// };
+
+const variant = {
+  initial: { opacity: 0, x: "-100%" },
+  whileInView: {
+    opacity: 1,
+    x: "0%",
+    transition: { delay: 0.2 },
+  },
+};
 
 export default function Services() {
   const services = [
@@ -35,9 +61,14 @@ export default function Services() {
   ];
 
   return (
-    <Stack bgColor="brand.100" gap="30" p={{ md: "10" }}>
+    <Stack as={motion.div} bgColor="brand.100" gap="30" p={{ md: "10" }}>
       {services.map((service, index) => (
         <Flex
+          as={motion.div}
+          variants={variant}
+          initial="initial"
+          whileInView="whileInView"
+          viewport={{ once: true }}
           direction={{ base: "column", md: "row" }}
           key={index}
           gap="10"
