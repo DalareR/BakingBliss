@@ -29,7 +29,9 @@ function App() {
           <Route path="/about" element={<About />} />
         </Routes>
       </Box>
-      <Footer />
+      <Box w="100%" maxW={{ base: "100svw", md: "120ch" }}>
+        <Footer />
+      </Box>
     </VStack>
   );
 }

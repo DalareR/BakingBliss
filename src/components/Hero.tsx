@@ -1,20 +1,13 @@
-import {
-  Button,
-  Flex,
-  Grid,
-  GridItem,
-  Heading,
-  Image,
-  VStack,
-} from "@chakra-ui/react";
+import { Flex, Grid, GridItem, Heading, Image, VStack } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { AnimatePresence, motion } from "framer-motion";
 //local
 import fruittart from "../assets/images/fruittart.jpg";
 import gingerbread from "../assets/images/gingerbread.jpg";
 import poundCake from "../assets/images/poundCake.jpg";
 import lemonPie from "../assets/images/lemonPie.jpg";
-import { AnimatePresence, motion } from "framer-motion";
+import Btn from "./Btn";
 
 export default function Hero() {
   const imgCarousel = [fruittart, gingerbread, poundCake, lemonPie];
@@ -82,19 +75,7 @@ export default function Hero() {
               occasions
             </Heading>
             <Link to="/">
-              <Button
-                color="brand.400"
-                bg="none"
-                outline="2px solid #fa7527"
-                height="25px"
-                p="2"
-                borderRadius="3px"
-                _hover={{
-                  bg: "brand.100",
-                }}
-              >
-                View Menu
-              </Button>
+              <Btn title="View Menu" colorScheme="brand" />
             </Link>
           </VStack>
         </GridItem>

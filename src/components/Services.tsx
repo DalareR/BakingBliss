@@ -1,33 +1,8 @@
-import {
-  Heading,
-  Image,
-  VStack,
-  Text,
-  Button,
-  Stack,
-  Flex,
-} from "@chakra-ui/react";
+import { Heading, Image, VStack, Text, Stack, Flex } from "@chakra-ui/react";
 import { motion } from "framer-motion";
-//local
 import { Link } from "react-router-dom";
-
-// const variant = {
-//   initial: {
-//     opacity: 0,
-//     y: "-100%",
-//   },
-//   animate: {
-//     opacity: 1,
-//     y: 0,
-//     transition: {
-//       delay: 0.5,
-//     },
-//   },
-//   exit: {
-//     opacity: 0,
-//     y: "-100%",
-//   },
-// };
+//local
+import Btn from "./Btn";
 
 const variant = {
   initial: { opacity: 0, x: "-100%" },
@@ -88,9 +63,7 @@ export default function Services() {
             <Heading>{service.title}</Heading>
             <Text>{service.desc}</Text>
             <Link to={service.link}>
-              <Button colorScheme="brand" borderRadius="none">
-                {service.btn}
-              </Button>
+              <Btn title={service.btn} colorScheme="brand" variant="solid" />
             </Link>
           </VStack>
         </Flex>
