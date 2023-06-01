@@ -6,14 +6,23 @@ import Home from "./Pages/Home";
 import About from "./Pages/About";
 import Footer from "./components/Footer";
 import Menu from "./Pages/Menu";
+import { Route, Routes } from "react-router-dom";
 
 function App() {
   return (
     <Box minH="100vh" bg={`url(${bg})`} bgColor="brand.50">
       <Box m="auto" maxW={{ base: "100svw", md: "120ch" }}>
         <NavBar />
-        <Menu />
-        {/* <Home /> */}
+        <Routes>
+          <Route path="/">
+            <Route index element={<Home />} />
+            <Route path="home" element={<Home />} />
+          </Route>
+          <Route path="/menu" element={<Menu />}>
+            <Route path=":id" element={<Menu />} />
+          </Route>
+          <Route path="/about" element={<About />} />
+        </Routes>
         <Footer />
       </Box>
     </Box>

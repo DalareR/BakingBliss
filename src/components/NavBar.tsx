@@ -51,17 +51,19 @@ export default function NavBar() {
   const [menuCollapsed, setMenuCollapsed] = useState(true);
   const navItems = [
     { name: "Home", link: "/" },
-    { name: "About", link: "/" },
-    { name: "Menu", link: "/" },
-    { name: "Contact", link: "/" },
+    { name: "About", link: "/about" },
+    { name: "Menu", link: "/menu" },
+    { name: "Contact", link: "/contact" },
   ];
 
   return (
     <>
       <HStack justifyContent="space-between" p="0 1%" h="50px" bg="brand.50">
-        <Heading size="lg" fontWeight="600">
-          Baking Bliss
-        </Heading>
+        <Link to="/">
+          <Heading size="lg" fontWeight="600">
+            Baking Bliss
+          </Heading>
+        </Link>
         <HStack display={{ base: "none", md: "flex" }}>
           {navItems.map((item, index) => (
             <Link key={index} to={item.link}>

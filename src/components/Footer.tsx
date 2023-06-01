@@ -23,6 +23,8 @@ export default function Footer() {
       align="center"
       p="5% 0"
       bg="brand.50"
+      mt="5"
+      boxShadow="-3px -3px 10px rgba(0,0,0,.05)"
     >
       <HStack justify="space-around" p="5" w="100%">
         <Flex display={{ base: "none", md: "flex" }} gap="3">
