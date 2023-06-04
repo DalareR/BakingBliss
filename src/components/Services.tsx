@@ -18,20 +18,16 @@ export default function Services() {
     {
       title: "Local & Homemade",
       img: "https://images.unsplash.com/photo-1609320034420-0e15d165951e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1335&q=80",
-      desc: `'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam
-        molestiae sit amet hic. Voluptas cumque sint neque quisquam, nihil
-        totam!`,
-      link: "/",
-      btn: "Shop",
+      desc: `We take pride in offering a delightful selection of homemade baked goods that are crafted with love and care. At our bakery, we prioritize using locally sourced ingredients to ensure the highest quality and to support our community's farmers and suppliers. We are passionate about our craft and put our heart into every item we create, resulting in delectable pastries, bread, cakes, and more.`,
+      link: "/menu",
+      btn: "View Menu",
     },
     {
-      title: "For Gifts & Other Occassions",
+      title: "For Gifts & Other Occasions",
       img: "https://images.unsplash.com/photo-1575613585261-9a70817dda7f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80",
-      desc: `'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam
-          molestiae sit amet hic. Voluptas cumque sint neque quisquam, nihil
-          totam!`,
-      link: "/",
-      btn: "Shop",
+      desc: `For those searching for the ideal gift, our bakery offers an array of elegantly packaged treats. Imagine presenting a beautifully arranged gift box filled with an assortment of freshly baked cookies, scrumptious cupcakes, and artisanal pastries. Each item is carefully crafted to captivate the senses, featuring intricate designs, mouthwatering flavors, and a perfect balance of textures.`,
+      link: "/menu",
+      btn: "View Menu",
     },
   ];
 
