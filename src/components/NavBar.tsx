@@ -51,8 +51,8 @@ export default function NavBar() {
   const [menuCollapsed, setMenuCollapsed] = useState(true);
   const navItems = [
     { name: "Home", link: "/" },
-    { name: "About", link: "/about" },
     { name: "Menu", link: "/menu" },
+    { name: "About", link: "/about" },
     { name: "Contact", link: "/contact" },
   ];
 
@@ -91,8 +91,26 @@ export default function NavBar() {
             </Link>
           ))}
           <HStack>
-            <Icon as={BsInstagram} boxSize={5} ml="3" />
-            <Icon as={AiOutlineFacebook} boxSize={6} fontWeight={"bold"} />
+            <Link target="_blank" to="https://instagram.com">
+              <Icon
+                as={BsInstagram}
+                boxSize={5}
+                ml="3"
+                cursor="pointer"
+                transition="all .3s ease"
+                _hover={{ transform: "scale(1.1)", color: "brand.500" }}
+              />
+            </Link>
+            <Link target="_blank" to="https://facebook.com">
+              <Icon
+                as={AiOutlineFacebook}
+                boxSize={6}
+                fontWeight={"bold"}
+                cursor="pointer"
+                transition="all .3s ease"
+                _hover={{ transform: "scale(1.1)", color: "brand.500" }}
+              />
+            </Link>
           </HStack>
         </HStack>
         {/* Menu Icon for Mobile devices */}

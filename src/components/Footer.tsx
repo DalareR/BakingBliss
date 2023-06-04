@@ -58,19 +58,23 @@ export default function Footer() {
           </VStack>
           <Divider borderColor="black" />
           <HStack>
-            <Link to="/">
+            <Link target="_blank" to="https://instagram.com">
               <Icon
                 as={BsInstagram}
                 boxSize={5}
-                _hover={{ transform: `scale(1.1)` }}
+                cursor="pointer"
+                transition="all .3s ease"
+                _hover={{ transform: "scale(1.1)", color: "brand.500" }}
               />
             </Link>
-            <Link to="/">
+            <Link target="_blank" to="https://facebook.com">
               <Icon
                 as={AiOutlineFacebook}
                 boxSize={6}
                 fontWeight={"bold"}
-                _hover={{ transform: `scale(1.1)` }}
+                cursor="pointer"
+                transition="all .3s ease"
+                _hover={{ transform: "scale(1.1)", color: "brand.500" }}
               />
             </Link>
           </HStack>

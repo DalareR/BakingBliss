@@ -144,7 +144,7 @@ export default function Hero() {
               occasions
             </Heading>
             <Box as={motion.div} variants={variantChild}>
-              <Link to="/">
+              <Link to="/menu">
                 <Btn title="View Menu" colorScheme="brand" />
               </Link>
             </Box>
