@@ -31,13 +31,13 @@ export default function Footer() {
           <Link to="/">
             <Text fontWeight="bold">Home</Text>
           </Link>
-          <Link to="/">
+          <Link to="/about">
             <Text fontWeight="bold">About</Text>
           </Link>
-          <Link to="/">
+          <Link to="/menu">
             <Text fontWeight="bold">Menu</Text>
           </Link>
-          <Link to="/">
+          <Link to="/contact">
             <Text fontWeight="bold">Contact</Text>
           </Link>
         </Flex>

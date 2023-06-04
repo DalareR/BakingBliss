@@ -60,7 +60,7 @@ export default function NavBar() {
     <>
       <HStack justifyContent="space-between" p="0 1%" h="50px" bg="brand.50">
         <Link to="/">
-          <Heading size="lg" fontWeight="600">
+          <Heading size="lg" fontWeight="500" fontFamily="Italiana">
             Baking Bliss
           </Heading>
         </Link>
