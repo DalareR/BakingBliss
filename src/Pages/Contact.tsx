@@ -6,10 +6,15 @@ import {
   Heading,
   Text,
   VStack,
+  useToast,
 } from "@chakra-ui/react";
+import { motion } from "framer-motion";
+import { useForm } from "react-hook-form";
+import { z } from "zod";
+import { zodResolver } from "@hookform/resolvers/zod";
+//local
 import FormInput from "../components/FormInput";
 import FormTextArea from "../components/FormTextArea";
-import { motion } from "framer-motion";
 
 const variantParent = {
   initial: {
@@ -47,7 +52,32 @@ const variantChildren = {
   },
 };
 
+const schema = z.object({
+  name: z.string().nonempty("Required").min(3, "Min characters required!"),
+  email: z.string().email("Not valid email").nonempty("Required!"),
+  subject: z
+    .string()
+    .nonempty("Required!")
+    .min(5, "Min 5 characters required!"),
+  message: z.string().nonempty("Required").min(5, "Min 5 characters required!"),
+});
+
+type FormType = z.infer<typeof schema>;
+
 export default function Contact() {
+  const {
+    register,
+    formState: { errors },
+    handleSubmit,
+    reset,
+  } = useForm<FormType>({ resolver: zodResolver(schema) });
+  const toast = useToast();
+
+  const onSubmit = (value: FormType) => {
+    value && toast({ title: "Email successfully sent!", status: "success" });
+    reset();
+  };
+
   return (
     <Grid
       w={{ md: "120ch" }}
@@ -110,10 +140,12 @@ export default function Contact() {
         >
           How can we help?
         </Heading>
-        <form>
+        <form onSubmit={handleSubmit(onSubmit)}>
           <FormInput
             as={true}
             variants={variantChildren}
+            register={register}
+            error={errors}
             name="name"
             label="What is you Name?"
             placeholder="John Smith *"
@@ -121,6 +153,8 @@ export default function Contact() {
           <FormInput
             as={true}
             variants={variantChildren}
+            register={register}
+            error={errors}
             name="email"
             label="What is you email?"
             placeholder="john@gmail.com *"
@@ -128,6 +162,8 @@ export default function Contact() {
           <FormInput
             as={true}
             variants={variantChildren}
+            register={register}
+            error={errors}
             name="subject"
             label="What service are you looking for?"
             placeholder="Order a dozen of cookie..."
@@ -135,15 +171,18 @@ export default function Contact() {
           <FormTextArea
             as={true}
             variants={variantChildren}
+            register={register}
+            error={errors}
             name="message"
             label="Your message"
             placeholder="Hello Dal, can you help me with..."
           />
           <Button
-            as={motion.div}
+            as={motion.button}
             variants={variantChildren}
             type="submit"
             colorScheme="brand"
+            cursor="pointer"
           >
             Send
           </Button>
