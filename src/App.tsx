@@ -7,6 +7,7 @@ import About from "./Pages/About";
 import Footer from "./components/Footer";
 import Menu from "./Pages/Menu";
 import { Route, Routes } from "react-router-dom";
+import Contact from "./Pages/Contact";
 
 function App() {
   return (
@@ -16,7 +17,7 @@ function App() {
       bg={`url(${bg})`}
       bgColor="brand.50"
     >
-      <Box maxW={{ base: "100svw", md: "120ch" }}>
+      <Box w="100%" maxW={{ base: "100%", md: "120ch" }}>
         <NavBar />
         <Routes>
           <Route path="/">
@@ -27,6 +28,7 @@ function App() {
             <Route path=":id" element={<Menu />} />
           </Route>
           <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
       </Box>
       <Box w="100%" maxW={{ base: "100svw", md: "120ch" }}>

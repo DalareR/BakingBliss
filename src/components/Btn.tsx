@@ -2,8 +2,8 @@ import { Button } from "@chakra-ui/react";
 
 interface Props {
   title: string;
-  variant?: "outline" | "link" | "solid" | "unstyled";
-  colorScheme?: "brand" | "gray";
+  variant?: string;
+  colorScheme?: string;
 }
 
 export default function Btn({ variant, colorScheme, title }: Props) {

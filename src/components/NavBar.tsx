@@ -56,8 +56,6 @@ export default function NavBar() {
     { name: "Contact", link: "/contact" },
   ];
 
-  console.log(selectedItem);
-
   return (
     <>
       <HStack justifyContent="space-between" p="0 1%" h="50px" bg="brand.50">
