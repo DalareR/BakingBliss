@@ -66,12 +66,13 @@ export default function Product({ product }: Props) {
         />
         <Link to={product.link}>
           <Button
-            display={productLink === product.link ? "block" : "none"}
+            opacity={productLink === product.link ? 1 : 0}
             pos="absolute"
             top="50%"
             left="50%"
             transform="translate(-50%,-50%)"
             bg="brand.200"
+            transition="all .5s ease"
             _hover={{
               bg: "brand.100",
             }}
