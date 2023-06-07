@@ -2,7 +2,7 @@ import { Box, Button, Icon, Image } from "@chakra-ui/react";
 import { useState } from "react";
 import { BsSearchHeart } from "react-icons/bs";
 import { Link, useParams } from "react-router-dom";
-import { menuItems } from "../data";
+import { menuItems } from "../data/menuData";
 import { motion } from "framer-motion";
 //local
 import ProductDesc from "./ProductDesc";

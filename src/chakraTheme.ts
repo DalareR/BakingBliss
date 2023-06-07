@@ -17,13 +17,13 @@ const colors = {
 
 const config: ThemeConfig = {
     initialColorMode: 'light',
-    useSystemColorMode: false
-}
+    useSystemColorMode: false,
+  }
 
 const styles = {
     global : {
         body: {
-            fontFamily: `Nanum Gothic, sans-serif`
+            fontFamily: `Nanum Gothic, sans-serif`,
         }
     }
 }

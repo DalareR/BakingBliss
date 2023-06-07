@@ -2,7 +2,7 @@ import { Grid } from "@chakra-ui/react";
 import { motion, AnimatePresence } from "framer-motion";
 //local
 import Product from "../components/Product";
-import { menuItems } from "../data";
+import { menuItems } from "../data/menuData";
 
 const variantParent = {
   initial: {
